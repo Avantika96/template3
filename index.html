@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Main Page</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    @media only screen and (max-width: 991px) 
+    {
+		.flex-container
+		{
+			position: relative;
+            width: 100%;
+            display: inline-block;
+		}
+		.flex-item
+		{
+			position: relative;
+			width: 100%;
+			margin: 0%;
+			margin-bottom: 10px;
+		}
+
+    }
+    </style>
+</head>
+<body>
+    <div class="container-fluid" style="background-color: #4DB6AC; padding:2%;">
+         <nav class="navbar navbar-default" id="box1" >
+             <div class="container-fluid">
+                    <div class="navbar-header">
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                    </div>
+				    <ul class="nav navbar-nav">
+				      <li class="active"><a href="#">Home</a></li>
+				      <li><a href="#">Page 1</a></li>
+				      <li><a href="#">Page 2</a></li>
+				      <li><a href="#">Page 3</a></li>
+				    </ul>
+             </div>
+         </nav>
+         <div class="container-fluid">
+         <div class="row">
+             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="box2">
+                <div class="list-group" style="width: 100%; background-color: #80CBC4">
+				  <a href="#" class="list-group-item">First item</a>
+				  <a href="#" class="list-group-item">Second item</a>
+				  <a href="#" class="list-group-item">Third item</a>
+				  <a href="#" class="list-group-item">Fourth item</a>
+				  <a href="#" class="list-group-item">Fifth item</a>
+				</div>
+             </div>
+             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" id="box3">
+                <div class="container-fluid">
+                <div class="flex-container">
+                	<div class="flex-item"> 
+                	  <a href="product.html"><button type="button" class="btn btn-primary" style="width: 100%;">VIEW</button></a>
+                	</div>
+                	<div class="flex-item">
+                	  <a href="product.html"><button type="button" class="btn btn-primary" style="width: 100%;">VIEW</button></a>
+                	</div>
+                	<div class="flex-item">
+                	  <a href="product.html"><button type="button" class="btn btn-primary" style="width: 100%;">VIEW</button></a>
+                	</div>
+                </div><br>
+                <div class="flex-container">
+                	<div class="flex-item">
+                	  <a href="product.html"><button type="button" class="btn btn-primary" style="width: 100%;">VIEW</button></a>
+                	</div>
+                	<div class="flex-item">
+                	  <a href="product.html"><button type="button" class="btn btn-primary" style="width: 100%;">VIEW</button></a>
+                	</div>
+                	<div class="flex-item">
+                	  <a href="product.html"><button type="button" class="btn btn-primary" style="width: 100%;">VIEW</button></a>
+                	</div>
+                </div>
+                </div>
+             </div>
+         </div>
+         </div>
+    </div>
+
+</body>
+</html>

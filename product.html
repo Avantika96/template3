@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product Detail</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    @media only screen and (max-width: 991px) 
+    {
+		#box2
+		{
+			height: 300px;
+		}
+		.info
+		{
+			width: 100%;
+			height: 300px;
+			position: absolute;
+			top: 0%;
+			right: 0%;
+		}
+
+    }
+    </style>
+
+
+</head>
+<body onload="startTime()">
+    <div class="container-fluid" style="background-color: #4DB6AC; padding:2%;">
+         <nav class="navbar navbar-default" id="box1" >
+             <div class="container-fluid">
+                 <div class="navbar-header">
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                    </div>
+				    <ul class="nav navbar-nav">
+				    
+				      <li class="active"><a href="#">Home</a></li>
+				      <li><a href="#">Page 1</a></li>
+				      <li><a href="#">Page 2</a></li>
+				      <li><a href="#">Page 3</a></li>
+				    </ul>
+             </div>
+         </nav>
+         <div class="container-fluid">
+         <div class="row">
+             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="box2">
+                 IMAGE
+             </div>
+             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" id="box3" style="height: 540px">
+                <div class="container-fluid">
+                    <div class="info">
+                       <div class="container-fluid">
+                       <div class="row" style="padding: 5%;font-size: 20px;text-align: center">
+                         <p id="data"></p>
+                   
+                         PRODUCT QUANTITY:<p id="quant"></p>
+                         <br>
+                       
+                         
+                       </div>
+                       <div class="row">
+                         <button type="submit" value"buy" class="btn btn-primary" id="control" style="width: 100%; height: 70px;" onclick="return check()">BUY NOW</button>
+                       </div>
+                       </div>
+                    </div>
+                </div>
+             </div>
+         </div>
+         </div>
+    </div>
+<script>
+    var min=2;
+    var sec=0;
+    var date=new Date();
+    var msec=Date.parse(date);
+
+    function startTime() {
+    var today = new Date();
+    var msec2=Date.parse(today);
+    if(msec2-msec==60000)
+    {
+    	var x=document.getElementById('control');
+    		x.disabled=true;
+    }
+    var n = today.toDateString();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    sec=changeTime(sec);
+    document.getElementById('data').innerHTML =
+    n+" "+h + ":" + m + ":" + s;
+
+    var t = setTimeout(startTime, 500);
+	}
+	function checkTime(i) {
+	    if (i < 10) {i = "0" + i};  
+	    return i;
+	}
+	function changeTime(i){
+		if(i==0)
+	    {
+	    	return 59;
+	    }
+	    else
+	    {
+	    	i=i-1;
+	    	return i;
+	    }
+	}
+</script>
+<script>
+    var q=10;
+    document.getElementById('quant').innerHTML=q;
+
+    function check()
+    {
+    	q=q-1;
+    	document.getElementById('quant').innerHTML=q;
+    	if(q==0)
+    	{
+    		var x=document.getElementById('control');
+    		x.disabled=true;
+    	}
+    }
+</script>
+</body>
+</html>
